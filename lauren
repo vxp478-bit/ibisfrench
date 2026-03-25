@@ -49,9 +49,7 @@
             <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
+                
                     <li>
                         <a class="page-scroll" href="#education" style="color: #eee8d5;">Module 1</a>
                     </li>
