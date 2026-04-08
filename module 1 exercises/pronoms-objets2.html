@@ -1,1 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Exercice - Subjonctif</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    p { margin-bottom: 18px; line-height: 1.6; }
+    input { width: 120px; margin: 0 5px; }
+    .correct { color: #008000; }
+    .incorrect { color: #ff0000; }
+    button { margin-top: 0; padding: 10px 20px; font-size: 16px; cursor: pointer; background: #2e7d32; color: #fff; border: none; border-radius: 4px; }
+    .form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 20px; }
+    .nav-buttons { display: flex; gap: 10px; }
+    .nav-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; background: #e8f5e9; color: #2e7d32; border-radius: 4px; text-decoration: none; font-weight: 600; }
+    .nav-button:hover { background: #c8e6c9; }
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+  <link href="../css/style.css" rel="stylesheet">
+</head>
 
+<body onpaste="return false">
+    <header class="site-header">
+        <div class="logo"><a href="index.html"><span class="logo-ibis">ibis</span> <span class="logo-french">FRENCH</span></a></div>
+        <nav class="header-nav">
+          <a class="nav-item" href="#">à propos</a>
+          <a class="nav-item" href="#">F.A.Q</a>
+          <a class="nav-item" href="#">nous contacter</a>
+          <a class="nav-item" href="#">Université de Miami</a>
+        </nav>
+    </header>
+  
+    <main>
+        <h1>Ajoutez les bons pronoms (direct, indirect, y ou en).</h1>
+
+        <form id="quiz">
+
+        <p>Dans la cuisine française, il existe des plats traditionnels qui ont traversé les siècles. Par exemple, la <strong>ratatouille provençale</strong> ? Tout le monde
+        <input type="text" id="q1"> adore. On <input type="text" id="q2"> prépare souvent pendant l’été, quand les légumes sont de saison.</p>
+          
+        <p>Il ne faut pas oublier les <strong>épices</strong>, bien sûr. Les chefs expérimentés <input type="text" id="q3"> utilisent avec parcimonie pour ne pas masquer le goût des légumes.
+          Quand un apprenti arrive en cuisine, le chef <input type="text" id="q4"> apprend les bases de la découpe. Ensuite, quand il maîtrise bien les techniques, le chef <input type="text" id="q5"> 
+          enseigne des recettes plus complexes. Les apprenti doivent écouter les chefs, <input type="text" id="q6"> respecter et <input type="text" id="q7"> parler s'il y a des soucis dans la cuisine.</p>
+
+        <p>As-tu déjà goûté les <strong>escargots de Bourgogne</strong> ? Je <input type="text" id="q8"> ai mangé seulement deux une fois, par curiosité, mais je n’ai pas terminé le plat entier. Ce n’est pas pour tout le monde !</p>
+
+        <p>Quant aux restaurants étoilés, j’<input type="text" id="q9"> vais rarement. C’est souvent trop cher, mais l’expérience gastronomique <input type="text" id="q10"> vaut la peine. Ma mère <input type="text" id="q11"> 
+          a amené quand j’étais petit et pour ça je <input type="text" id="q12"> suis reconnaissant.</p>
+
+        <p>Enfin, les recettes de grand-mère, tout le monde <input type="text" id="q13"> connaît, mais peu de gens <input type="text" id="q14"> considèrent un exemple de cousine gourmet ! Cependant, je me souviens encore de celles de ma grand-mère, et
+          j'<input type="text" id="q15"> pense souvent quand je cousine.</p>
+
+        <div class="form-actions">
+          <button type="button" onclick="checkAnswers()">Vérifier</button>
+          <div class="nav-buttons">
+            <a class="nav-button" href="pronoms-objets1.html">Retour</a>
+            <a class="nav-button" href="doubles-pronoms.html">Suivant</a>
+          </div>
+        </div>
+        </form>
+
+        <h3 id="result"></h3>
+
+        <script>
+        function checkAnswers() {
+        const answers = {
+            q1: "l'", "l’",
+            q2: "la",
+            q3: "les",
+            q4: "lui",
+            q5: "lui",
+            q6: "les",
+            q7: "leur",
+            q8: "en",
+            q9: "y",
+            q10: "en",
+            q11: "m'y", "m’y", "m y",
+            q12: "lui",
+            q13: "les",
+            q14: "les",
+            q15: "y"
+        };
+
+        let score = 0;
+
+        for (let key in answers) {
+            let userAnswer = document.getElementById(key).value.toLowerCase().trim();
+            if (userAnswer === answers[key]) {
+            score++;
+            document.getElementById(key).style.borderColor = "green";
+            } else {
+            document.getElementById(key).style.borderColor = "red";
+            }
+        }
+
+        document.getElementById("result").innerHTML =
+            "Score: " + score + " / 15";
+        }
+        </script>
+    </main>
+</body>
+</html>
