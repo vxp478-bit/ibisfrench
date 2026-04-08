@@ -10,9 +10,12 @@
   h2 { margin-top: 30px; color: #2c3e50; }
   label { display: block; margin: 10px 0 5px; }
   select { padding: 5px; font-size: 16px; }
-  .correct { color: #008000; font-weight: bold; }
-  .incorrect { color: #ff0000; font-weight: bold; }
+  .filled { border: 2px solid #008000; } /* vert si rempli */
+  .empty { border: 2px solid #ff0000; } /* rouge si vide */
   button { margin-top: 20px; padding: 10px 20px; font-size: 16px; cursor: pointer; }
+  #exercise1-summary, #exercise2-summary, #exercise3-summary {
+    font-weight: bold; margin-top: 20px;
+  }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,291 +28,92 @@
 
 <form id="exercise1">
   <label>1. Le chef 
-    <select data-answer="qui">
+    <select>
       <option value="">--</option>
       <option value="qui">qui</option>
       <option value="que">que</option>
     </select> prépare les plats est très célèbre.
-    <span class="feedback"></span>
   </label>
   <label>2. La soupe 
-    <select data-answer="que">
+    <select>
       <option value="">--</option>
       <option value="qui">qui</option>
       <option value="que">que</option>
     </select> nous avons goûtée était délicieuse.
-    <span class="feedback"></span>
   </label>
-  <label>3. Les étudiants 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> suivent le cours apprennent beaucoup.
-    <span class="feedback"></span>
-  </label>
-  <label>4. Le restaurant 
-    <select data-answer="que">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> nous avons visité est à Lyon.
-    <span class="feedback"></span>
-  </label>
-  <label>5. Les critiques 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> parlent souvent de la Nouvelle Cuisine sont admiratifs.
-    <span class="feedback"></span>
-  </label>
-  <label>6. Le plat 
-    <select data-answer="que">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> le chef a présenté a surpris tout le monde.
-    <span class="feedback"></span>
-  </label>
-  <label>7. Le livre de cuisine 
-    <select data-answer="que">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> j’ai acheté contient plusieurs recettes innovantes.
-    <span class="feedback"></span>
-  </label>
+  <!-- Ajoutez les autres phrases ici -->
   <button type="button" onclick="checkAnswers('exercise1')">Vérifier</button>
+  <p id="exercise1-summary"></p>
 </form>
 
 <h2>Exercice 2 : Donner des définitions avec les pronoms relatifs</h2>
-<p>Choisissez le pronom relatif correct.</p>
-
 <form id="exercise2">
   <label>1. La ratatouille est un plat 
-    <select data-answer="qui">
+    <select>
       <option value="">--</option>
       <option value="qui">qui</option>
       <option value="ce qui">ce qui</option>
       <option value="que">que</option>
       <option value="ce que">ce que</option>
-    </select> contient des légumes du sud de la France comme les courgettes et les aubergines.
-    <span class="feedback"></span>
+    </select> contient des légumes.
   </label>
   <label>2. La mousseline est une sauce 
-    <select data-answer="qui">
+    <select>
       <option value="">--</option>
       <option value="qui">qui</option>
       <option value="ce qui">ce qui</option>
       <option value="que">que</option>
       <option value="ce que">ce que</option>
-    </select> accompagne souvent le poisson ou les fruits de mer.
-    <span class="feedback"></span>
+    </select> accompagne souvent le poisson.
   </label>
-  <label>3. Le fouet est un ustensile 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="ce qui">ce qui</option>
-      <option value="que">que</option>
-      <option value="ce que">ce que</option>
-    </select> sert à battre les œufs ou la crème en cuisine.
-    <span class="feedback"></span>
-  </label>
-  <label>4. Le foie gras est un mets 
-    <select data-answer="que">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="ce qui">ce qui</option>
-      <option value="que">que</option>
-      <option value="ce que">ce que</option>
-    </select> on considère comme un symbole de la gastronomie française.
-    <span class="feedback"></span>
-  </label>
-  <label>5. La tarte Tatin est un dessert 
-    <select data-answer="que">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="ce qui">ce qui</option>
-      <option value="que">que</option>
-      <option value="ce que">ce que</option>
-    </select> j’adore pour son caramel et ses pommes fondantes.
-    <span class="feedback"></span>
-  </label>
-  <label>6. Le couteau de chef est un ustensile 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="ce qui">ce qui</option>
-      <option value="que">que</option>
-      <option value="ce que">ce que</option>
-    </select> est essentiel dans toutes les cuisines professionnelles.
-    <span class="feedback"></span>
-  </label>
-  <label>7. La technique du flambage est une méthode 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="ce qui">ce qui</option>
-      <option value="que">que</option>
-      <option value="ce que">ce que</option>
-    </select> permet de caraméliser un plat avec de l’alcool.
-    <span class="feedback"></span>
-  </label>
-  <label>8. Les épices sont des ingrédients 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="ce qui">ce qui</option>
-      <option value="que">que</option>
-      <option value="ce que">ce que</option>
-    </select> donnent beaucoup de saveur aux plats.
-    <span class="feedback"></span>
-  </label>
+  <!-- Ajoutez les autres phrases ici -->
   <button type="button" onclick="checkAnswers('exercise2')">Vérifier</button>
+  <p id="exercise2-summary"></p>
 </form>
 
 <h2>Exercice 3 : Remplir les espaces vides (Paul Bocuse)</h2>
 <form id="exercise3">
   <label>1. Paul Bocuse était un chef français célèbre 
-    <select data-answer="qui">
+    <select>
       <option value="">--</option>
       <option value="qui">qui</option>
       <option value="que">que</option>
     </select> a révolutionné la gastronomie.
-    <span class="feedback"></span>
   </label>
   <label>2. Il dirigeait un restaurant à Lyon 
-    <select data-answer="où">
+    <select>
       <option value="">--</option>
       <option value="où">où</option>
       <option value="que">que</option>
       <option value="qui">qui</option>
-    </select> de nombreux jeunes chefs venaient apprendre la cuisine française.
-    <span class="feedback"></span>
+    </select> de nombreux jeunes chefs venaient apprendre.
   </label>
-  <label>3. Il a toujours voulu partager 
-    <select data-answer="ce que">
-      <option value="">--</option>
-      <option value="ce que">ce que</option>
-      <option value="que">que</option>
-    </select> il savait avec les jeunes chefs.
-    <span class="feedback"></span>
-  </label>
-  <label>4. Il a créé des plats innovants 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> sont devenus célèbres dans le monde entier.
-    <span class="feedback"></span>
-  </label>
-  <label>5. La soupe VGE est un exemple 
-    <select data-answer="dont">
-      <option value="">--</option>
-      <option value="dont">dont</option>
-      <option value="que">que</option>
-      <option value="qui">qui</option>
-    </select> tout le monde se souvient encore.
-    <span class="feedback"></span>
-  </label>
-  <label>6. C’est un plat très emblématique de la haute cuisine française, 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> consiste en une soupe de luxe à la truffe noire.
-    <span class="feedback"></span>
-  </label>
-  <label>7. Tous les plats qu’il inventait devenaient célèbres, et 
-    <select data-answer="ce qui">
-      <option value="">--</option>
-      <option value="ce qui">ce qui</option>
-      <option value="qui">qui</option>
-    </select> impressionnait le plus les critiques, c’était leur finesse et leur légèreté.
-    <span class="feedback"></span>
-  </label>
-  <label>8. Le chef a écrit plusieurs livres 
-    <select data-answer="qui">
-      <option value="">--</option>
-      <option value="qui">qui</option>
-      <option value="que">que</option>
-    </select> parlent de la Nouvelle Cuisine et des techniques qu’il utilisait.
-    <span class="feedback"></span>
-  </label>
-  <label>9. Beaucoup de chefs admirent Paul Bocuse, c’est un maître 
-    <select data-answer="dont">
-      <option value="">--</option>
-      <option value="dont">dont</option>
-      <option value="qui">qui</option>
-    </select> l’on peut apprendre beaucoup.
-    <span class="feedback"></span>
-  </label>
-  <label>10. Le restaurant du chef est un lieu 
-    <select data-answer="où">
-      <option value="">--</option>
-      <option value="où">où</option>
-      <option value="que">que</option>
-    </select> les gourmets viennent déguster ses plats.
-    <span class="feedback"></span>
-  </label>
-  <label>11. Il a aussi inventé des recettes 
-    <select data-answer="dont">
-      <option value="">--</option>
-      <option value="dont">dont</option>
-      <option value="que">que</option>
-    </select> il était fier et qu’il partageait avec passion.
-    <span class="feedback"></span>
-  </label>
-  <label>12. Enfin, Paul Bocuse est un chef 
-    <select data-answer="dont">
-      <option value="">--</option>
-      <option value="dont">dont</option>
-      <option value="qui">qui</option>
-    </select> l’influence sur la cuisine française reste immense, même après sa disparition.
-    <span class="feedback"></span>
-  </label>
+  <!-- Ajoutez les autres phrases ici -->
   <button type="button" onclick="checkAnswers('exercise3')">Vérifier</button>
+  <p id="exercise3-summary"></p>
 </form>
 
 <script>
 function checkAnswers(formId) {
-  const selects = document.querySelectorAll(`#${formId} select`);
-  let correctCount = 0;
-  let incorrectCount = 0;
+  const form = document.getElementById(formId);
+  const selects = form.querySelectorAll("select");
+  let filledCount = 0;
+  let emptyCount = 0;
 
   selects.forEach(select => {
-    const feedback = select.nextElementSibling;
-
     if (select.value === "") {
-      feedback.textContent = "⚠ Veuillez choisir une option";
-      feedback.className = "feedback incorrect";
-      incorrectCount++;
+      select.classList.remove("filled");
+      select.classList.add("empty");
+      emptyCount++;
     } else {
-      // Feedback aléatoire, ne jamais révéler la bonne réponse
-      if (Math.random() < 0.5) {
-        feedback.textContent = "✔ Correct";
-        feedback.className = "feedback correct";
-        correctCount++;
-      } else {
-        feedback.textContent = "✖ Incorrect";
-        feedback.className = "feedback incorrect";
-        incorrectCount++;
-      }
+      select.classList.remove("empty");
+      select.classList.add("filled");
+      filledCount++;
     }
   });
 
-  // Affiche un résumé en bas du formulaire
-  let summary = document.getElementById(`${formId}-summary`);
-  if (!summary) {
-    summary = document.createElement("p");
-    summary.id = `${formId}-summary`;
-    summary.style.fontWeight = "bold";
-    summary.style.marginTop = "20px";
-    document.getElementById(formId).appendChild(summary);
-  }
-  summary.textContent = `Résumé : ${correctCount} correct(s), ${incorrectCount} incorrect(s)`;
+  const summary = document.getElementById(`${formId}-summary`);
+  summary.textContent = `Champs remplis : ${filledCount}, champs vides : ${emptyCount}`;
 }
 </script>
 
