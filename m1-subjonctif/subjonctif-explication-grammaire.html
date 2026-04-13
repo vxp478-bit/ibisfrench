@@ -2,19 +2,123 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Explication du Grammaire - Subjonctif</title>
-  <style>
-    body { font-family: 'Dongle', 'Sansation'; padding: 20px; font-size: x-large;}
-    p { margin-bottom: 18px; line-height: 1.6; }
-    input { width: 120px; margin: 0 5px; }
-    .correct { color: #008000; }
-    .incorrect { color: #ff0000; }
-    button { margin-top: 0; padding: 10px 20px; font-size: 16px; cursor: pointer; background: #2e7d32; color: #fff; border: none; border-radius: 4px; }
-    .form-actions { display: flex; justify-content: flex-end; align-items: center; gap: 10px; margin-top: 20px; }
-    .nav-buttons { display: flex; gap: 10px; }
-    .nav-button { display: inline-flex; align-items: center; justify-content: center; padding: 10px 18px; background: #e8f5e9; color: #2e7d32; border-radius: 4px; text-decoration: none; font-weight: 600; margin-left: 950px;}
-    .nav-button:hover { background: #c8e6c9; }
-  </style>
+  <title>Explication de Grammaire - Subjonctif</title>
+<style>
+body {
+  font-family: 'Dongle', 'Sansation';
+  padding: 20px;
+  background: #fff;
+  color: #111;
+}
+
+/* MAIN CONTAINER */
+.container {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 34px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: 24px;
+}
+
+/* CARDS */
+.card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 18px 20px;
+  margin-bottom: 16px;
+}
+
+/* TIP BOX */
+.tip {
+  background: #f7f7f7;
+  border-left: 4px solid #2e7d32;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* EXAMPLES */
+.example {
+  background: #f3f8f3;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+/* LISTS */
+ul {
+  padding-left: 20px;
+  margin-top: 8px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* VERB SECTION */
+.verbs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.verb-box {
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  padding: 15px;
+  background: #fff;
+}
+
+.verb-box h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+/* HEADER NAV IMPROVEMENT (subtle only) */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.header-nav a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header-nav a:hover {
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .verbs {
+    grid-template-columns: 1fr;
+  }
+
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+</style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">

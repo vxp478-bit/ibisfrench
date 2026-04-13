@@ -1,22 +1,62 @@
- <style>
-body { font-family: Arial; padding: 20px; }
-input { width: 120px; margin: 5px; }
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nous contacter | Contact Us</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <link href="css/style.css" rel="stylesheet">
 
+    <style> 
+        body { 
+            /* Changed font to Dongle */
+            font-family: 'Dongle', sans-serif; 
+            padding: 20px; 
+            /* Note: Dongle is a compact font, so we keep line-height and color as before */
+            line-height: 1.6;
+            color: #333;
+            font-size: 1.4rem; /* Dongle usually requires a larger size to match other fonts' readability */
+        } 
+        input { 
+            width: 120px; 
+            margin: 5px; 
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-family: 'Dongle', sans-serif;
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
 
-</style>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Almendra+Display&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Dongle:wght@300;400;700&family=Sansation:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
+    <div class="contact-container">
+        <h2>Nous contacter</h2>
+        
+        <p>
+            <strong>FR :</strong> Pour toute question concernant le contenu du cours ou les devoirs, veuillez contacter votre professeur de français. Vous pouvez également contacter la Dre Viviana Pezzullo (directrice des études de premier cycle en français) à <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> pour vos questions sur Ibis French.
+        </p>
+        
+        <p>
+            <strong>EN :</strong> For questions related to course content or assignments, please contact your French instructor. You may also reach out to Dr. Viviana Pezzullo (Director of Undergraduate Studies in French) at <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> for your questions about Ibis French.
+        </p>
+    </div>
 
-<div>
-  <h2>Nous contacter</h2>
-
-  <p><strong>FR :</strong> Pour toute question concernant le contenu du cours ou les devoirs, veuillez contacter votre professeur de français. Vous pouvez également contacter la Dre Viviana Pezzullo (directrice des études de premier cycle en français) à 
-    <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> pour vos questions sur Ibis French.
-  </p>
-
-  <p><strong>EN :</strong> For questions related to course content or assignments, please contact your French instructor. You may also reach out to Dr. Viviana Pezzullo (Director of Undergraduate Studies in French) at 
-    <a href="mailto:vxp478@miami.edu">vxp478@miami.edu</a> for your questions about Ibis French.
-  </p>
-</div>
+</body>
+</html>
